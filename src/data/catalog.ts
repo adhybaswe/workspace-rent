@@ -37,7 +37,7 @@ export const CATALOG: Product[] = [
   { id: 'plant-succulent', name: 'Desktop Succulent', category: 'Accessories', price: 3, image: 'https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?auto=format&fit=crop&q=80&w=600', description: 'Small desk companion.' },
 
   // GARAGE SPACE
-  { id: 'garage-shelf', name: 'Industrial Tool Shelf', category: 'Garage Space', price: 20, image: 'https://images.unsplash.com/photo-1532729822106-bc0d0918b29c?auto=format&fit=crop&q=80&w=600', description: 'Heavy-duty storage.' },
-  { id: 'garage-workbench', name: 'Craftsman Workbench', category: 'Garage Space', price: 35, image: 'https://images.unsplash.com/photo-1530124560676-587cab91df31?auto=format&fit=crop&q=80&w=600', description: 'Solid wood work surface.' },
-  { id: 'garage-storage', name: 'Modular Bin System', category: 'Garage Space', price: 15, image: 'https://images.unsplash.com/photo-1590236170054-94678121665a?auto=format&fit=crop&q=80&w=600', description: 'Organize your gear.' },
+  { id: 'garage-shelf', name: 'Industrial Tool Shelf', category: 'Garage Space', price: 20, image: 'https://images.unsplash.com/photo-1553531384-397c80973a0b?auto=format&fit=crop&q=80&w=600', description: 'Heavy-duty storage.' },
+  { id: 'garage-workbench', name: 'Craftsman Workbench', category: 'Garage Space', price: 35, image: 'https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&q=80&w=600', description: 'Solid wood work surface.' },
+  { id: 'garage-storage', name: 'Modular Bin System', category: 'Garage Space', price: 15, image: 'https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&q=80&w=600', description: 'Organize your gear.' },
 ];
