@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useWorkspace, SlotId } from '@/context/WorkspaceContext';
-import { Plus, Monitor, Layout, Armchair, Coffee, Waves, Bike, Sofa, Box, Trash2, Lamp, Flower } from 'lucide-react';
+import { Plus, Monitor, Layout, Armchair, Coffee, Waves, Bike, Sofa, Box, Trash2, Package } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Canvas() {
@@ -38,10 +38,10 @@ export default function Canvas() {
 
              {/* Desk surface accessories */}
              <div className="absolute top-4 left-6">
-                <Slot id="lamp" category="Lamps" label="Lamp" icon={<Lamp size={20} />} className="w-20 h-20 border-4 border-dashed rounded-xl" />
+                <Slot id="accessory-left" category="Accessories" label="Accessory" icon={<Package size={20} />} className="w-20 h-20 border-4 border-dashed rounded-xl" />
              </div>
              <div className="absolute top-4 right-6">
-                <Slot id="plant" category="Plants" label="Plant" icon={<Flower size={20} />} className="w-20 h-20 border-4 border-dashed rounded-xl" />
+                <Slot id="accessory-right" category="Accessories" label="Accessory" icon={<Package size={20} />} className="w-20 h-20 border-4 border-dashed rounded-xl" />
              </div>
           </div>
 
@@ -86,7 +86,8 @@ function Slot({
 }) {
   const { slots, isSlotOpen, openPicker, setSlotProduct } = useWorkspace();
   const product = slots[id];
-  const isOpen = isSlotOpen === id;
+  const isOpen = isSlotOpen?.id === id;
+  const isSmallSlot = id.startsWith('accessory');
 
   return (
     <div className={`relative group ${isOpen ? 'z-50' : 'z-10'}`}>
@@ -98,25 +99,36 @@ function Slot({
         } flex flex-col items-center justify-center cursor-pointer transition-all overflow-hidden relative shadow-sm`}
       >
         {product ? (
-          <div className="flex flex-col items-center justify-center p-4 text-center gap-3">
-            <div className="text-emerald-600 mb-1">
+          <div className="flex flex-col items-center justify-center p-2 text-center gap-1">
+            <div className="text-emerald-600">
               {icon}
             </div>
-            <div className="flex flex-col">
-              <span className="text-[10px] font-black uppercase tracking-tighter text-emerald-800 leading-none mb-1">SELECTED:</span>
-              <span className="text-xs font-black text-stone-900 uppercase leading-tight line-clamp-2 px-2 italic">
-                {product.name}
-              </span>
-            </div>
+            {!isSmallSlot && (
+              <div className="flex flex-col">
+                <span className="text-[8px] font-black uppercase tracking-tighter text-emerald-800 leading-none mb-1">SELECTED:</span>
+                <span className="text-[10px] font-black text-stone-900 uppercase leading-tight line-clamp-2 px-1 italic">
+                  {product.name}
+                </span>
+              </div>
+            )}
+            
+            {/* Tooltip for small slots on hover */}
+            {isSmallSlot && (
+              <div className="absolute inset-0 bg-emerald-500/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-1">
+                <span className="text-[8px] font-black text-white uppercase leading-tight text-center">
+                  {product.name}
+                </span>
+              </div>
+            )}
             
             <button 
               onClick={(e) => {
                 e.stopPropagation();
                 setSlotProduct(id, null);
               }}
-              className="absolute top-2 right-2 p-1 text-stone-300 hover:text-rose-500 transition-colors"
+              className="absolute top-1 right-1 p-0.5 text-stone-300 hover:text-rose-500 transition-colors"
             >
-              <Trash2 size={14} />
+              <Trash2 size={12} />
             </button>
           </div>
         ) : (
@@ -125,8 +137,8 @@ function Slot({
               {icon}
             </div>
             <div className="flex flex-col items-center">
-              <Plus className="text-stone-300 mb-1" size={16} />
-              <span className="text-[9px] font-black uppercase tracking-[0.2em] text-stone-400">Add {label}</span>
+              <Plus className="text-stone-300 mb-0.5" size={12} />
+              <span className="text-[8px] font-black uppercase tracking-[0.1em] text-stone-400">Add</span>
             </div>
           </div>
         )}

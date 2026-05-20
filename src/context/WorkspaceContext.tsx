@@ -9,8 +9,8 @@ export type SlotId =
   | 'monitor-left' 
   | 'monitor-center' 
   | 'monitor-right'
-  | 'lamp'
-  | 'plant'
+  | 'accessory-left'
+  | 'accessory-right'
   | 'coffee'
   | 'outdoor'
   | 'relax'
@@ -34,8 +34,8 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
     'monitor-left': null,
     'monitor-center': null,
     'monitor-right': null,
-    lamp: null,
-    plant: null,
+    'accessory-left': null,
+    'accessory-right': null,
     coffee: null,
     outdoor: null,
     relax: null,
