@@ -29,4 +29,12 @@ export const CATALOG: Product[] = [
 
   // RELAX ZONE
   { id: 'relax-beanbag', name: 'Giant Bean Bag', category: 'Relax Zone', price: 10, image: 'https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&q=80&w=300', description: 'Maximum comfort.' },
+
+  // LAMPS (New category or sub-category for Desk)
+  { id: 'lamp-sunset', name: 'Sunset Desk Lamp', category: 'Lamps', price: 8, image: 'https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&q=80&w=300', description: 'Warm ambient light.' },
+  { id: 'lamp-office', name: 'LED Task Light', category: 'Lamps', price: 12, image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=300', description: 'Focus-ready lighting.' },
+
+  // PLANTS (New category for Desk)
+  { id: 'plant-monstera', name: 'Mini Monstera', category: 'Plants', price: 5, image: 'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&q=80&w=300', description: 'Tropical vibes.' },
+  { id: 'plant-succulent', name: 'Desktop Succulent', category: 'Plants', price: 3, image: 'https://images.unsplash.com/photo-1520302630591-fd1c66ed1163?auto=format&fit=crop&q=80&w=300', description: 'Small desk companion.' },
 ];

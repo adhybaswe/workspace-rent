@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useWorkspace, SlotId } from '@/context/WorkspaceContext';
-import { Plus, Monitor, Layout, Armchair, Coffee, Waves, Bike, Sofa, Box, Trash2 } from 'lucide-react';
+import { Plus, Monitor, Layout, Armchair, Coffee, Waves, Bike, Sofa, Box, Trash2, Lamp, Flower } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Canvas() {
@@ -34,6 +34,14 @@ export default function Canvas() {
                 <Slot id="monitor-left" category="Monitors" label="Side Screen" icon={<Monitor size={24} />} className="w-40 h-32 border-4 border-dashed rounded-xl" />
                 <Slot id="monitor-center" category="Monitors" label="Primary Display" icon={<Monitor size={32} />} className="w-56 h-40 border-4 border-dashed rounded-xl" />
                 <Slot id="monitor-right" category="Monitors" label="Side Screen" icon={<Monitor size={24} />} className="w-40 h-32 border-4 border-dashed rounded-xl" />
+             </div>
+
+             {/* Desk surface accessories */}
+             <div className="absolute top-4 left-6">
+                <Slot id="lamp" category="Lamps" label="Lamp" icon={<Lamp size={20} />} className="w-20 h-20 border-4 border-dashed rounded-xl" />
+             </div>
+             <div className="absolute top-4 right-6">
+                <Slot id="plant" category="Plants" label="Plant" icon={<Flower size={20} />} className="w-20 h-20 border-4 border-dashed rounded-xl" />
              </div>
           </div>
 
@@ -76,11 +84,12 @@ function Slot({
   icon: React.ReactNode;
   className: string;
 }) {
-  const { slots, openPicker, setSlotProduct } = useWorkspace();
+  const { slots, isSlotOpen, openPicker, setSlotProduct } = useWorkspace();
   const product = slots[id];
+  const isOpen = isSlotOpen === id;
 
   return (
-    <div className="relative group">
+    <div className={`relative group ${isOpen ? 'z-50' : 'z-10'}`}>
       <motion.div
         whileHover={{ scale: 1.02 }}
         onClick={() => openPicker(id, category)}
