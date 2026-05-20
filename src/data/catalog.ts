@@ -35,4 +35,9 @@ export const CATALOG: Product[] = [
   { id: 'lamp-office', name: 'LED Task Light', category: 'Accessories', price: 12, image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=300', description: 'Focus-ready lighting.' },
   { id: 'plant-monstera', name: 'Mini Monstera', category: 'Accessories', price: 5, image: 'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&q=80&w=300', description: 'Tropical vibes.' },
   { id: 'plant-succulent', name: 'Desktop Succulent', category: 'Accessories', price: 3, image: 'https://images.unsplash.com/photo-1520302630591-fd1c66ed1163?auto=format&fit=crop&q=80&w=300', description: 'Small desk companion.' },
+
+  // GARAGE SPACE
+  { id: 'garage-shelf', name: 'Industrial Tool Shelf', category: 'Garage Space', price: 20, image: 'https://images.unsplash.com/photo-1581244276891-6677cf47ef25?auto=format&fit=crop&q=80&w=300', description: 'Heavy-duty storage.' },
+  { id: 'garage-workbench', name: 'Craftsman Workbench', category: 'Garage Space', price: 35, image: 'https://images.unsplash.com/photo-1530124560676-587cab91df31?auto=format&fit=crop&q=80&w=300', description: 'Solid wood work surface.' },
+  { id: 'garage-storage', name: 'Modular Bin System', category: 'Garage Space', price: 15, image: 'https://images.unsplash.com/photo-1590236170054-94678121665a?auto=format&fit=crop&q=80&w=300', description: 'Organize your gear.' },
 ];
