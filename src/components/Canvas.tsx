@@ -84,9 +84,9 @@ function Slot({
   icon: React.ReactNode;
   className: string;
 }) {
-  const { slots, isSlotOpen, openPicker, setSlotProduct } = useWorkspace();
+  const { slots, openSlot, openPicker, setSlotProduct } = useWorkspace();
   const product = slots[id];
-  const isOpen = isSlotOpen?.id === id;
+  const isOpen = openSlot?.id === id;
   const isSmallSlot = id.startsWith('accessory');
 
   return (
