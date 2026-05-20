@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# monis.rent | Workspace Builder
 
-## Getting Started
+An interactive, blueprint-style workspace designer for digital nomads and startups in Bali. Build your perfect remote office setup visually and rent it instantly.
 
-First, run the development server:
+## 🚀 Approach & Design Philosophy
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+For this project, I moved away from a traditional product catalog and opted for a **Blueprint-First Design**. Instead of static lists, the user interacts with a visual "hotspot" system that mimics an architectural sketch or a moodboard.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Key aspects of the approach include:
+- **Conceptual Clarity:** By using clean icons and bold typography on the canvas (Blueprint Mode), the UI remains uncluttered and professional, even when complex setups are built.
+- **Contextual Interaction:** A Global Selection Modal provides a focused, high-fidelity experience when choosing specific gear, showing realistic product photography only when needed.
+- **Bali Lifestyle Integration:** Beyond just desks and chairs, the tool includes categories specific to the Bali nomad experience, like "Outdoor Gear" (surfboards/scooters) and "Coffee Stations".
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 15 (App Router):** For a fast, modern foundation with robust routing.
+- **React 19:** Utilizing the latest features for state management and UI composition.
+- **Framer Motion:** Powering the "pop" animations, modal transitions, and the tactile feel of the builder.
+- **Tailwind CSS 4.0:** For a "Brutalist" aesthetic with thick borders, high contrast, and responsive spacing.
+- **Lucide React:** Providing a consistent, minimalist icon set for the blueprint representation.
 
-## Learn More
+## 🔮 Future Improvements
 
-To learn more about Next.js, take a look at the following resources:
+With more time, I would focus on the following enhancements:
+1. **Interactive 3D Preview:** While the 2D blueprint is clean, integrating a real-time 3D preview (using React Three Fiber) would provide an even more immersive "wow" factor.
+2. **Collision Detection & Persistence:** Implementing smarter logic to prevent unrealistic item combinations and adding `localStorage` or database persistence so users can save and share their designs.
+3. **Advanced Customization:** Allowing users to change the materials of the desks or the colors of the chairs within the builder to match their specific villa aesthetic.
+4. **Automated Inventory Sync:** Integrating directly with an inventory management API (like Booqable) to ensure all selectable items are currently in stock.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
